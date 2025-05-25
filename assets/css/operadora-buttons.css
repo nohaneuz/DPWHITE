@@ -1,0 +1,47 @@
+/* Estilos específicos para os botões na página de operadora */
+.operadora-navigation-buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.btn-anterior-operadora {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: all 0.3s ease;
+}
+
+.btn-anterior-operadora:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.btn-continuar-operadora {
+  background: #444;
+  border: none;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: all 0.3s ease;
+}
+
+.btn-continuar-operadora:hover {
+  background: #d32f2f;
+}
+
+.btn-continuar-operadora:disabled {
+  background: #333;
+  color: #666;
+  cursor: not-allowed;
+}

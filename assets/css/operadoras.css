@@ -1,0 +1,167 @@
+:root {
+  --primary: #000000;
+  --primary-light: #333333;
+  --secondary: #C8102E;
+  --secondary-light: #e63e5c;
+  --odonto: #1E73BE;
+  --saude: #00A99D;
+  --white: #ffffff;
+  --gray-100: #f8f9fa;
+  --gray-200: #e9ecef;
+  --gray-300: #dee2e6;
+  --gray-400: #ced4da;
+  --gray-500: #adb5bd;
+  --gray-600: #6c757d;
+  --gray-700: #495057;
+  --gray-800: #343a40;
+  --gray-900: #212529;
+  --success: #28a745;
+  --info: #17a2b8;
+  --warning: #ffc107;
+  --danger: #dc3545;
+}
+
+.operadoras-search {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: var(--white);
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+}
+
+.operadoras-search:focus {
+  outline: none;
+  border-color: var(--secondary);
+}
+
+.operadoras-search::placeholder {
+  color: var(--gray-500);
+}
+
+.operadoras-info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  color: var(--gray-400);
+  font-size: 0.9rem;
+}
+
+.operadoras-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.operadora-card {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 1rem;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  transition: transform 0.3s, background-color 0.3s;
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  min-height: 180px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.operadora-card:hover {
+  transform: translateY(-5px);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.operadora-card.selected {
+  border: 2px solid var(--secondary);
+  background-color: rgba(200, 16, 46, 0.1);
+}
+
+.operadora-code {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  font-size: 0.75rem;
+  color: var(--gray-500);
+}
+
+.operadora-image {
+  width: 100%;
+  max-width: 120px;
+  height: 60px;
+  object-fit: contain;
+  margin-bottom: 1rem;
+}
+
+.operadora-name {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--white);
+  word-break: break-word;
+}
+
+.operadoras-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.pagination-button {
+  background-color: rgba(255, 255, 255, 0.05);
+  color: var(--white);
+  border: none;
+  border-radius: 0.25rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.pagination-button:hover:not(:disabled) {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.pagination-button.active {
+  background-color: var(--secondary);
+}
+
+.pagination-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+  .operadoras-grid {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  }
+  
+  .operadora-card {
+    padding: 1rem 0.5rem;
+    min-height: 150px;
+  }
+  
+  .operadora-image {
+    max-width: 100px;
+    height: 50px;
+  }
+  
+  .operadora-name {
+    font-size: 0.8rem;
+  }
+  
+  .operadoras-pagination {
+    flex-wrap: wrap;
+  }
+}
